@@ -37,7 +37,7 @@ public class SortMapChapter10 {
         unsortMap.entrySet().stream().sorted(Map.Entry.<String,Integer>comparingByValue().reversed())
         	.forEachOrdered(x -> result1.put(x.getKey(),x.getValue()));
         
-        System.out.println("sorted by value reveresed");
+        System.out.println("sorted by value reveresed test");
         System.out.println(result1);
         
 	}
