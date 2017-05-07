@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import com.java8.pojo.Student;
@@ -58,6 +59,17 @@ public class FlatMapChapter13 {
 		List<String> collect = 	college.stream().map(x -> x.getBook()).flatMap(x -> x.stream()).distinct().collect(	Collectors.toList());
 		
 		System.out.println(collect);
+		
+		
+		System.out.println("stream primitive flat map");
+		
+		int[] nums = {1,2,3,4,5,6,7};
+		
+		Stream<int[]> numStream = Stream.of(nums);
+		
+		IntStream intStream = numStream.flatMapToInt(x -> Arrays.stream(x));
+		
+		intStream.forEach(System.out::println);
 		
 	}
 
