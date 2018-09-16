@@ -1,4 +1,4 @@
 # java8tutorials
 
 
-Tutoirials to learn Java8
+Tutorials to learn Java8
